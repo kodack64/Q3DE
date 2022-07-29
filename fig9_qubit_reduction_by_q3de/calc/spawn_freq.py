@@ -3,7 +3,7 @@
 import pprint
 import numpy as np
 from _spawn_common import diagnose
-
+import os
 
 def run():
     anomaly_size_org = 8
@@ -39,5 +39,6 @@ def run():
             fout.close()
             pprint.pprint(result)
 
-
+if not os.path.exists("./result/"):
+    os.mkdir("./result/")
 run()
