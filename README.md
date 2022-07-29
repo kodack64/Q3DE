@@ -17,15 +17,13 @@ Then, unzip and rename the folder to `blossom5` and place it to the following tw
 so that compilers can find `./fig3_8_logical_error_rate_with_anomaly/src/blossom5/PerfectMatching.h`, for example.
 
 ## Validation
-Each folder can regenerate the figure or table shown in the paper.
-Similar figures and parameters should be generated as a result.
-Note that they are not exactly the same due to a statistical fluctuation in Monte-Carlo sampling.
+Each folder will regenerate figures or tables used in the paper. The regenerated figures should be the same within a statistical fluctuation by Monte-Carlo sampling.
 
 ## Tested environment
 We tested our codes on Windows 11 and Ubuntu 20.04 LTS on Windows Subsystem Linux.
 
 ## Contents
-This file consists of five folders. Each of them generates corresponding figures and tables with a single or a few executions of scripts.
+This repository consists of five folders. These can be independently compiled and executed to generate different figures or tables.
 
 ### Evaluation of the effect of anomalous regions on logical errors (`fig3_8_logical_error_rate_with_anomaly`)
 Logical error rates per cycle with and without an anomalous region are evaluated with the Monte-Carlo sampling. 
