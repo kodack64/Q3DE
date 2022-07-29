@@ -2,10 +2,10 @@ This repository contains all the source codes and scripts to regenerate the figu
 Several source codes are distributed only for the validation of the paper. See `./license.docx` for details.
 
 ## Software dependencies
-- C++ compiler: g++ 9.0.4 or Visual Studio C++ 2019.
-- Data aggregation and plots: Python 3.9.4.
+- C++ compiler: g++ 9.0.4 or Visual Studio C++ 2019
+- Data aggregation and plots: Python 3.9.4
 - Environment-independent build: CMake 3.21.1
-- Circuit synthesis: Xilinx Vitis HLS 2021.2. 
+- Circuit synthesis: Xilinx Vitis HLS 2021.2.1
 - Edmonds' Blossom algorithm: Blossom V
 
 ## Installation of Blossom V
@@ -43,5 +43,5 @@ The results are used for plotting Figure 10.
 
 ### FPGA implementation of decoding units (`tab4_fpga_implementation`)
 The performance and overhead of anomaly-position-aware error estimation are evaluated with high-level circuit synthesis.
-We used Vitis HLS 2021.2 for evaluation. The obtained parameters are used in Table 4.
+We used Vitis HLS 2021.2.1 for evaluation. The obtained parameters are used in Table 4.
 
