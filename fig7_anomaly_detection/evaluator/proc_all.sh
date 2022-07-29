@@ -1,5 +1,7 @@
 # Copyright 2022 NTT CORPORATION
 
+mkdir ./figure
+mkdir ./result
 python proc0_spawn_allanomaly.py data_allanomaly 1
 python proc1_calculate_window.py
 python proc2_spawn_latency.py data_trajectory 1
