@@ -43,7 +43,7 @@ The results are used for plotting Figure 9.
 The instruction throughput of lattice surgeries on two random logical qubits with randomly allocated anomalous regions is evaluated by simulation.
 The results are used for plotting Figure 10. 
 
-## FPGA implementation of decoding units (`tab4_fpga_implementation`)
+### FPGA implementation of decoding units (`tab4_fpga_implementation`)
 The performance and overhead of anomaly-position-aware error estimation are evaluated with high-level circuit synthesis.
 We used Vitis HLS 2021.4 for evaluation. The obtained parameters are used in Table 4.
 
