@@ -44,7 +44,7 @@ os.chdir(folder)
 if os.name == "nt":
     proc = "../bin/main.exe"
 else:
-    proc = "../bin/main.out"
+    proc = "../bin/main"
 
 task_list = []
 
