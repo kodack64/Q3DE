@@ -15,7 +15,10 @@ The process of `evaluator` consists of several sequential analysis. See `README.
 cd generator
 ./build.sh
 
-# perform sampling and analysis (this will take long time and about 30GB disk space for intermediate outputs)
+# perform sampling and analysis
 cd ../evaluator
 ./proc_all.sh
 ```
+
+This numerical evaluation take long time and about 30GB disk space for intermediate outputs.
+

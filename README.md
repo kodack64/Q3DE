@@ -1,16 +1,17 @@
-# Overview
 This repository contains all the source codes and scripts to regenerate the figures and tables of the paper, Q3DE: A fault-tolerant quantum computer architecture for multi-bit burst errors by cosmic rays.
+Several source codes are distributed only for the validation of the paper. See `./license.docx` for details.
 
 ## Software dependencies
 - C++ compiler: g++ 9.0.4 or Visual Studio C++ 2019.
 - Data aggregation and plots: Python 3.9.4.
 - Environment-independent build: CMake 3.21.1
-- Circuit synthesis: Xilinx Vitis HLS 2021.4. 
+- Circuit synthesis: Xilinx Vitis HLS 2021.2. 
 - Edmonds' Blossom algorithm: Blossom V
 
-## Installation
+## Installation of Blossom V
+Several codes depend on the Kolmogorov's implementation of Blossom V.
 Please download the codes of Blossom V from [this URL](https://pub.ist.ac.at/~vnk/software.html).
-Then, unzip the file, rename the folder to `blossom5` and place it to the following directories
+Then, unzip and rename the folder to `blossom5` and place it to the following two directories
 - `./fig3_8_logical_error_rate_with_anomaly/src/`
 - `./fig7_anomaly_detection/generator/src/`
 so that compilers can find `./fig3_8_logical_error_rate_with_anomaly/src/blossom5/PerfectMatching.h`, for example.
