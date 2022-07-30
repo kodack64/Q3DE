@@ -6,7 +6,9 @@ The execution of them requires We checked the codes with benchmarks with Vitis H
 - `./40-BASE/` and `80-BASE`: `decoder.cpp` and `decoder.h` are the target of HLS. `tbench.cpp` and the contents in `benchmark` folder are files for random input/output testing.
 - `./40-Q3DE/` and `80-Q3DE`: File tree is the same as `[40,80]-BASE`, but this implementation takes an anomaly region into account.
 
-# Workflow
+Each directory corresponds to each row of the table.
+
+# Workflow (for each directory)
 - Load environment setting script `settings64.sh`
 - Launch `vitis_hls`
 - Create a new project with Vitis HLS 2021.2.1.
