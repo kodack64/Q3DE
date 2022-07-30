@@ -19,7 +19,7 @@ so that compilers can find `./fig3_8_logical_error_rate_with_anomaly/src/blossom
 ## Validation
 Each folder will typically regenerate figures or tables used in the paper. 
 The regenerated figures should be the same within a statistical fluctuation by Monte-Carlo sampling.
-The parameters for high-level synthesis also fluctuate according to the chosen random seed.
+The parameters of high-level synthesis also fluctuate according to the chosen random seed.
 
 ## Tested environment
 We tested our codes on Windows 11 and Ubuntu 20.04 LTS on Windows Subsystem Linux.
