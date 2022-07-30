@@ -22,3 +22,8 @@ cd ../evaluator
 
 This numerical evaluation take long time and about 30GB disk space for intermediate outputs.
 
+# Verified environment at authors
+
+- OS: Ubuntu 20.04 LTS on WSL2 (Installed via windows store on Windows 11)
+- Compiler: g++ 9.4.0
+- Python: 3.9.6

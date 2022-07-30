@@ -28,7 +28,7 @@ python plot_fig8.py
 
 # Verified environment at authors
 
-- OS: Ubuntu 9.4.0 on WSL2 (Installed via windows store on Windows 11)
+- OS: Ubuntu 20.04 LTS on WSL2 (Installed via windows store on Windows 11)
 - Compiler: g++ 9.4.0
 - Python: 3.9.6
 - Note: `blossom5` folder in the `src` is the Kolmogorov's implementation of Minimum-weight perfect matching, which is cited and mentioned in the paper.

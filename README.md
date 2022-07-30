@@ -2,7 +2,7 @@ This repository contains all the source codes and scripts to regenerate the figu
 Several source codes are distributed only for the validation of the paper. See `./license.docx` for details.
 
 ## Software dependencies
-- C++ compiler: g++ 9.0.4 or Visual Studio C++ 2019
+- C++ compiler: g++ 9.4.0 or Visual Studio C++ 2019
 - Data aggregation and plots: Python 3.9.4
 - Environment-independent build: CMake 3.21.1
 - Circuit synthesis: Xilinx Vitis HLS 2021.2.1

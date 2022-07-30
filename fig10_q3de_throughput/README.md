@@ -21,7 +21,7 @@ python micro_stat.py
 
 # Verified environment at authors
 
-- OS: Ubuntu 9.4.0 on WSL2 (Installed via windows store on Windows 11)
+- OS: Ubuntu 20.04 LTS on WSL2 (Installed via windows store on Windows 11)
 - Compiler: g++ 9.4.0
 - Python: 3.9.6
 
