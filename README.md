@@ -12,8 +12,10 @@ Several source codes are distributed only for the validation of the paper. See `
 Several codes depend on the Kolmogorov's implementation of Blossom V.
 Please download the codes of Blossom V from [this URL](https://pub.ist.ac.at/~vnk/software.html).
 Then, unzip and rename the folder to `blossom5` and place it to the following two directories
+
 - `./fig3_8_logical_error_rate_with_anomaly/src/`
 - `./fig7_anomaly_detection/generator/src/`
+
 so that compilers can find `./fig3_8_logical_error_rate_with_anomaly/src/blossom5/PerfectMatching.h`, for example.
 
 ## Validation
