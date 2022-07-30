@@ -4,7 +4,7 @@
 #include <ap_int.h>
 #include <hls_stream.h>
 
-#define DEBUG_PRINT
+//#define DEBUG_PRINT
 
 #define MAXCYCLE 1000
 #define CODESIZE 7

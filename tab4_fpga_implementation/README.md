@@ -24,10 +24,11 @@ The execution of them requires We checked the codes with benchmarks with Vitis H
     - Set target device as `Zynq Ultrascale+ XCZU7EV-2FFVC1156 MPSoC (ZCU104 evaluation board)`
     - Set clock period as 2.5 ns
     - Push `Finish`.
-- Launch Csynthesis
-  - It will execute CSimulation (functional test)
+- Run C Simulation (functional test)
+- Run C Synthesis
   - Synthesis will report the latency for 1000 code cycles. The matching per sec can be calculated from it.
-- Launch Implementation
+    - throughput = 1000 ns / {reported latency} ns
+- Run Implementation
     - Choose `RTL Synthesis, Place & Route`
     - The result shows the usage of LUT and Flip-Flop. The value itself may vary from the paper due to the different seed value.
 
