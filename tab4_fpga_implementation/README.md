@@ -36,5 +36,5 @@ Each directory corresponds to each row of the table.
 
 # Verified environment at authors
 
-- OS: Windows 11
+- OS: Ubuntu 16.04 LTS
 - Xilinx Vitis HLS 2021.2.1

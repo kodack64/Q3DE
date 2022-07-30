@@ -21,8 +21,9 @@ Each folder will typically regenerate figures or tables used in the paper.
 The regenerated figures should be the same within a statistical fluctuation by Monte-Carlo sampling.
 The parameters of high-level synthesis also fluctuate according to the chosen random seed.
 
-## Tested environment
-We tested our codes on Windows 11 and Ubuntu 20.04 LTS on Windows Subsystem Linux.
+## Tested environment at the authors
+For numerical simulations, we tested our codes on Ubuntu 20.04 LTS on Windows Subsystem Linux in Windows 11.
+For the high-level synthesis with Vitis HLS, we run the software on Ubuntu 16.04 LTS.
 
 ## Contents
 This repository consists of five folders. These can be independently compiled and executed to generate different figures or tables.
