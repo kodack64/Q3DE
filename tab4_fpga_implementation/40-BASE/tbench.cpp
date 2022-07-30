@@ -8,7 +8,7 @@ using namespace std;
 int main() {
     // parameters
 	// (default working directory is "<project_dir>/solution1/csim/build")
-    string path = "../../../../ftqc-fpga-decoder/benchmark/graph_idling/";
+    string path = "../../../../40-BASE/benchmark/graph_idling/";
     int32_t d = 5;
     int32_t c = 5;
     uint32_t seed = 0;
