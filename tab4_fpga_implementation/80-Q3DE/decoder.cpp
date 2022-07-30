@@ -90,7 +90,7 @@ int decoder(AXI_STREAM_ANO_IN &in, AXI_STREAM_OU &ou) {
 		*/
 		if(pop_ena && zdist1(depth_t, depth_t_local) > 1) depth_t++;
 		pop_ena = 1;
-		if (zdist1(depth_b, depth_t) > 0 && nb_ptr > 0) {
+		if (zdist1(depth_b, depth_t) >= 0 && nb_ptr > 0) {
 			ou_pair_t mp;
 #ifdef DEBUG_PRINT
             printf("\n*find_match @ (depth_b, depth_t, depth_t_local) = (%d,%d,%d)\n",depth_b,depth_t, depth_t_local);
