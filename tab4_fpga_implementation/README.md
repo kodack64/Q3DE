@@ -1,7 +1,7 @@
 # FPGA implementation of decoding units
 
 This folder is for regenerating the values of Table 4.
-The execution of them requires We checked the codes with benchmarks with Vitis HLS 2021.2.1.
+We checked the codes with benchmarks with Vitis HLS 2021.2.1.
 
 - `./40-BASE/` and `80-BASE`: `decoder.cpp` and `decoder.h` are the target of HLS. `tbench.cpp` and the contents in `benchmark` folder are files for random input/output testing.
 - `./40-Q3DE/` and `80-Q3DE`: File tree is the same as `[40,80]-BASE`, but this implementation takes an anomaly region into account.
