@@ -6,25 +6,30 @@ The execution of them requires We checked the codes with benchmarks with Vitis H
 - `./40-BASE/` and `80-BASE`: `decoder.cpp` and `decoder.h` are the target of HLS. `tbench.cpp` and the contents in `benchmark` folder are files for random input/output testing.
 - `./40-Q3DE/` and `80-Q3DE`: File tree is the same as `[40,80]-BASE`, but this implementation takes an anomaly region into account.
 
-
 # Workflow
-
+- Load environment setting script `settings64.sh`
+- Launch `vitis_hls`
 - Create a new project with Vitis HLS 2021.2.1.
-  - Set target device as `Zynq Ultrascale+ XCZU7EV-2FFVC1156
-MPSoC (ZCU104 evaluation board)`
-  - Set operating frequency as 400 MHz
-- Add `decoder.cpp` and `decoder.h` to the source.
-- Add the following files to Test Bench
-  - `tbench_io.cpp`
-  - `tbench_match.cpp`
-  - `tbench_util.cpp`
-  - `tbench_visualize.cpp`
-  - `tbench.cpp`
-  - `tbench.h`
-- For loading the decoding lattice to generate errors and syndromes, please modify the path at the L9 of `tbench.cpp` to allocate `[40,80]-[BASE,Q3DE]/benchmark/graph_idling/`
-- Running test bench will test for random input/output.
-- Circuit synthesis will report the latency for 1000 code cycles. The matching per sec can be calculated from it.
-  - ANQ (active node queue size) can be tuned at L10 of `decoder.h`.
+  - choose `Create Project`
+  - Put workspace just under the `tab4_fpga_implementation` directory.
+  - Add `decoder.cpp` and `decoder.h` to the source and select `decoder` as top function. push `Next`.
+  - Add the following files to Test Bench. then, push `Next`.
+    - `tbench.cpp`
+    - `benchmark/tbench.h`
+    - `benchmark/tbench_io.cpp`
+    - `benchmark/tbench_match.cpp`
+    - `benchmark/tbench_util.cpp`
+    - `benchmark/tbench_visualize.cpp`
+  - Set implementation targets.
+    - Set target device as `Zynq Ultrascale+ XCZU7EV-2FFVC1156 MPSoC (ZCU104 evaluation board)`
+    - Set clock period as 2.5 ns
+    - Push `Finish`.
+- Launch Csynthesis
+  - It will execute CSimulation (functional test)
+  - Synthesis will report the latency for 1000 code cycles. The matching per sec can be calculated from it.
+- Launch Implementation
+    - Choose `RTL Synthesis, Place & Route`
+    - The result shows the usage of LUT and Flip-Flop. The value itself may vary from the paper due to the different seed value.
 
 # Verified environment at authors
 
