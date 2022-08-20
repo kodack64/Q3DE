@@ -6,6 +6,13 @@ The script `eval_q3de.py` contains a function that specifies the files of HLS ta
 The implementation can be executed from `run.py`, or `run_with_arg.py` with arguments.
 
 ## Usage
+Before exuecting the scripts, open `run.py` and `run_with_arg.py` and updates
+```
+    relative_path="../../Q3DE/tab4_fpga_implementation",
+    vitis_setting_path="D:/Xilinx/Vitis_HLS/2021.2/settings64.bat",
+```
+to these point the appropriate directories.
+
 ```
 # Run synthesis with parameters in the script
 python run.py
