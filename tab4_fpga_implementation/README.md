@@ -11,8 +11,8 @@ Each directory corresponds to each row of the table.
 
 # Instllation
 
-Vitis HLS 2021.2.1 is required for synthesizing circuits from these codes. Note that the installation of Vitis HLS requires abotu 200GB.
-When you install Vitis HLS, please check `Devices -> Devices for Custom Platforms -> UltraScale+` to regenerate the results in the main text.
+Vitis HLS 2021.2.1 is required for synthesizing circuits from these codes. Note that the installation of Vitis HLS requires about 200GB.
+To regenerate the results in the main text, we need to check `Devices -> Devices for Custom Platforms -> UltraScale+` in the instllation.
 
 
 # Workflow (for each directory)
@@ -22,7 +22,7 @@ When you install Vitis HLS, please check `Devices -> Devices for Custom Platform
   - choose `Create Project`
   - Put workspace just under the `tab4_fpga_implementation` directory.
   - Add `decoder.cpp` and `decoder.h` to the source and select `decoder` as top function. push `Next`.
-  - Add the following files to Test Bench. then, push `Next`.
+  - Add the following files to Test Bench. Then, push `Next`.
     - `tbench.cpp`
     - `benchmark/tbench.h`
     - `benchmark/tbench_io.cpp`
@@ -36,17 +36,17 @@ When you install Vitis HLS, please check `Devices -> Devices for Custom Platform
     - For the clock period, see `Configuration`.
     - Push `Finish`.
 - Run C Simulation (functional test)
-  - Simulation will report whether the reuslts of random input/output tests.
+  - Simulation will report the results of random input/output tests.
 - Run C Synthesis
   - Synthesis will report the latency cycles for 1000 matching.
 - Run Implementation
     - Choose `RTL Synthesis, Place & Route`.
     - For the clock period, see `Configuration`.
-    - The result shows the actual period and usage of LUT and Flip-Flop. The value itself may vary from the paper due to the different seed value.
+    - The result shows the achieved clock period and usage of LUT and Flip-Flop. The value itself may vary from the paper due to the different seed values.
 
 # Evaluation
 ## Functional test
-If test passes, `C Simulation` ends with the following message.
+If the test passes, `C Simulation` ends with the following message.
 ```
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
@@ -68,11 +68,11 @@ Then, the matching per cycle can be calculated as follows.
 ```
 
 ## Resource usage
-The resourec usage is reported after `Run Implementation`
+The resource usage is reported after `Run Implementation`
 
 # Recommended configuration
 
-The following is the optimized parameters when we submitted the paper.
+In the submitted paper, we optimized clock periods for `C Synthesis` and `IMPLEMENTATION` as follows.
 
 - `BASE-40`: C Synthesis `1.66 ns`, IMPLEMENTATION `2.5ns`
 - `Q3DE-40`: C Synthesis `1.66 ns`, IMPLEMENTATION `2.5ns`
@@ -83,7 +83,7 @@ We chose a more strict clock period in `C Synthesis` since choosing the same clo
 Note that `C Synthesis` may warn `Timing Violation` with the above clock period. This is not a problem since we can satisfy the timing at the `IMPLEMENTATION`.
 While the achieved performance would vary for each run due to the randomness in the optimization, these configurations will output values similar to the match/cycle listed in the paper.
 
-After we worked on the arrangement of artifact evaluation, we found that the following setting is more stable and outputs higher matching per cyde cycle.
+After we worked on the arrangement of artifact evaluation, we found that the following setting is more stable and outputs higher matching per code cycle.
 
 - `BASE-40`: C Synthesis `2 ns`, IMPLEMENTATION `2 ns`
 - `Q3DE-40`: C Synthesis `2.22 ns`, IMPLEMENTATION `2.22 ns`
