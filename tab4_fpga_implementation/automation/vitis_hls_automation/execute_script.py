@@ -1,3 +1,5 @@
+# Copyright 2022 NTT CORPORATION
+
 import subprocess
 import os
 from .config import Config

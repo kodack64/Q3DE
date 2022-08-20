@@ -1,3 +1,5 @@
+# Copyright 2022 NTT CORPORATION
+
 import os
 from dataclasses import dataclass
 

@@ -1,4 +1,4 @@
-
+# Copyright 2022 NTT CORPORATION
 
 from vitis_hls_automation import generate_config, execute_vitis_hls, get_statistics
 

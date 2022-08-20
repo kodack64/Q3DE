@@ -1,3 +1,5 @@
+# Copyright 2022 NTT CORPORATION
+
 import os
 from .config import Config
 import xml.etree.ElementTree as ET

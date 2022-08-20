@@ -1,3 +1,5 @@
+# Copyright 2022 NTT CORPORATION
+
 import pprint
 from eval_q3de import evaluate_q3de_synthesis
 import sys
