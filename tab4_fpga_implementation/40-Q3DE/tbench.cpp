@@ -8,7 +8,7 @@ using namespace std;
 int main() {
     // parameters
 	// (default working directory is "<project_dir>/solution1/csim/build")
-    string path = "../../../../40-Q3DE/benchmark/graph_idling/";
+    string path = "../../../../../../40-Q3DE/benchmark/graph_idling/";
     int32_t d = CODESIZE; // Set codesize at decoder.h
     int32_t c = 9;
     uint32_t seed = 0;
