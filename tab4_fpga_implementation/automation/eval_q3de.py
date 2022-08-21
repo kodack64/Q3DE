@@ -11,7 +11,8 @@ def evaluate_q3de_synthesis(queue_size: int,
                      vitis_setting_path: str,
                      part_name: str,
                      overwrite: bool = False,
-                     synth_id: int = 0
+                     synth_id: int = 0,
+                     execute_csim: bool = False
                      ) -> dict:
     """evaluate q3de codes
 
@@ -25,6 +26,7 @@ def evaluate_q3de_synthesis(queue_size: int,
         part_name (str): part name
         overwrite (bool, optional): If true, re-execute the synthesis even if analysis is already done. Defaults to False.
         synth_id (int, optional): If not None, used as an identifier. Defaults to 0.
+        execute_csim (bool, optional): If true, perform C Simulation
         
     Returns:
         dict: result info
@@ -46,7 +48,8 @@ def evaluate_q3de_synthesis(queue_size: int,
         src_file_list=src_file_list,
         top_func_name=top_func_name,
         clock_period_csynth=clock_period_csynth_ns,
-        clock_period_implementation=clock_period_impl_ns
+        clock_period_implementation=clock_period_impl_ns,
+        execute_csim=execute_csim
     )
 
     if overwrite:

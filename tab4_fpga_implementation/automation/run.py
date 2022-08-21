@@ -18,7 +18,8 @@ result = evaluate_q3de_synthesis(
     part_name="xczu7ev-ffvc1156-2-e",
     relative_path="../../../../Q3DE/tab4_fpga_implementation",
     vitis_setting_path=vitis_setting_path,
-    overwrite=False
+    overwrite=False,
+    execute_csim=True
 )
 
 pprint.pprint(result)
