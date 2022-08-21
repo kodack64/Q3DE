@@ -1,5 +1,6 @@
 # Copyright 2022 NTT CORPORATION
 
+from __future__ import annotations
 import subprocess
 import os
 from .config import Config
@@ -86,8 +87,9 @@ def _get_vitis_hls_shell_script_linux(config: Config) -> str:
     """
     script_lines = []
     linux_path = config.vitis_setting_path.replace("\\", "/")
+    script_lines.append("#!/bin/sh")
     script_lines.append(f"{linux_path}")
-    script_lines.append(f"vitis_hls -f {config.vitis_hls_script_name} > {config.log_file_name}.txt")
+    script_lines.append(f"vitis_hls -f {config.vitis_hls_script_name}")
     script_str = "\n".join(script_lines) + "\n"
     return script_str
 
@@ -120,7 +122,10 @@ def execute_vitis_hls(config: Config) -> None:
     _create_working_directory(config.project_name)
     _generate_script_file(config)
     try:
-        args = [config.vitis_hls_shell_name]
+        if os.name == "nt":
+            args = [config.vitis_hls_shell_name]
+        else:
+            args = ["./"+config.vitis_hls_shell_name]
         subprocess.run(args, shell=False, capture_output=False)
     finally:
         _leave_working_directory()
