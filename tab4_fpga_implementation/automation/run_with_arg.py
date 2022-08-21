@@ -35,7 +35,8 @@ result = evaluate_q3de_synthesis(
     relative_path="../../../../Q3DE/tab4_fpga_implementation",
     vitis_setting_path=vitis_setting_path,
     overwrite=False,
-    synth_id=synth_id
+    synth_id=synth_id,
+    execute_csim=True
 )
 
 # print result
