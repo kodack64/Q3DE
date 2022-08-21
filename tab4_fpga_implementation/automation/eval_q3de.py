@@ -33,9 +33,20 @@ def evaluate_q3de_synthesis(queue_size: int,
     """
     assert(queue_size in [40, 80])
     arc_str = "Q3DE" if consider_anomaly else "BASE"
+
     src_file_list = []
     src_file_list.append(f"{relative_path}/{queue_size}-{arc_str}/decoder.cpp")
     src_file_list.append(f"{relative_path}/{queue_size}-{arc_str}/decoder.h")
+
+    src_file_list_tbench = []
+    src_file_list_tbench.append(f"{relative_path}/{queue_size}-{arc_str}/tbench.cpp")
+    src_file_list_tbench.append(f"{relative_path}/{queue_size}-{arc_str}/benchmark/tbench.h")
+    src_file_list_tbench.append(f"{relative_path}/{queue_size}-{arc_str}/benchmark/tbench_io.cpp")
+    src_file_list_tbench.append(f"{relative_path}/{queue_size}-{arc_str}/benchmark/tbench_match.cpp")
+    src_file_list_tbench.append(f"{relative_path}/{queue_size}-{arc_str}/benchmark/tbench_util.cpp")
+    src_file_list_tbench.append(f"{relative_path}/{queue_size}-{arc_str}/benchmark/tbench_visualize.cpp")
+
+
     project_name = f"{arc_str}_{queue_size}_{int(clock_freq_MHz)}_{int(margin_ratio*100)}_{synth_id}"
     top_func_name = "decoder"
     clock_period_impl_ns = 1000 / clock_freq_MHz
@@ -46,6 +57,7 @@ def evaluate_q3de_synthesis(queue_size: int,
         project_name=project_name,
         part_name=part_name,
         src_file_list=src_file_list,
+        src_file_list_tbench=src_file_list_tbench,
         top_func_name=top_func_name,
         clock_period_csynth=clock_period_csynth_ns,
         clock_period_implementation=clock_period_impl_ns,
