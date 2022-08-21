@@ -3,6 +3,7 @@
 from __future__ import annotations
 import subprocess
 import os
+import stat
 from .config import Config
 
 
@@ -125,7 +126,10 @@ def execute_vitis_hls(config: Config) -> None:
         if os.name == "nt":
             args = [config.vitis_hls_shell_name]
         else:
-            args = ["./"+config.vitis_hls_shell_name]
+            fname = "./"+config.vitis_hls_shell_name
+            st = os.stat(fname)
+            os.chmod(fname, st.st_mode | stat.S_IEXEC)
+            args = [fname]
         subprocess.run(args, shell=False, capture_output=False)
     finally:
         _leave_working_directory()
