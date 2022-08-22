@@ -5,11 +5,7 @@
 #include <hls_stream.h>
 
 #define MAXCYCLE 1000
-// #define CODESIZE 9
-// #define NUMENTRIES 64 // at least 16
-#define NUMENTRIES 30 // the case for d=11
-// #define NUMENTRIES 98 // the case for d=13
-// #define NUMENTRIES 256 // at least 16
+#define NUMENTRIES 80
 
 #define USE_RING
 #define ENABLE_COPY_DM2
